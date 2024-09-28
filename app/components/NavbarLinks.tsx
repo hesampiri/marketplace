@@ -13,17 +13,17 @@ export const navlinks = [
   {
     id: 1,
     name: "vehicle",
-    href: "#",
+    href: "/category/vehicle",
   },
   {
     id: 2,
     name: "electronics",
-    href: "#",
+    href: "/category/electronics",
   },
   {
     id: 3,
     name: "furniture",
-    href: "#",
+    href: "/category/furniture",
   },
 ];
 

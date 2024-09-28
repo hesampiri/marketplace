@@ -1,6 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import React from "react";
 import { navlinks } from "./NavbarLinks";
@@ -19,17 +24,19 @@ const MobileMenu = () => {
       </SheetTrigger>
       <SheetContent>
         <div className="flex flex-col mt-5">
-          {navlinks.map((item) => (
-            <Link
-              href={item.href}
-              key={item.id}
-              className={cn(
-                location === item.href ? "bg-muted" : "",
-                "p-2 rounded flex items-center font-medium"
-              )}
-            >
-              {item.name}
-            </Link>
+          {navlinks.map((item, index) => (
+            <SheetClose asChild key={index}>
+              <Link
+                href={item.href}
+                key={item.id}
+                className={cn(
+                  location === item.href ? "bg-muted" : "",
+                  "p-2 rounded flex items-center font-medium"
+                )}
+              >
+                {item.name}
+              </Link>
+            </SheetClose>
           ))}
         </div>
       </SheetContent>
