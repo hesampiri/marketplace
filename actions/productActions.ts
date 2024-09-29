@@ -38,7 +38,7 @@ export async function addProduct(currentstate: any, formData: FormData) {
     },
   });
 
-  return redirect(`/myproduct`);
+  return redirect(`/myproducts`);
 }
 
 export async function deleteProduct(id: string) {
