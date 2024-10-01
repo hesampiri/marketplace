@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const Loading = () => {
   return (
-    <span className="loading loading-spinner loading-lg text-primary absolute left-1/2 top-1/2"></span>
+    <div className="flex items-center justify-center h-screen">
+      <span className="loading loading-spinner loading-lg text-primary"></span>
+    </div>
   );
 };
 

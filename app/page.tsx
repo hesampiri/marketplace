@@ -3,7 +3,7 @@ import NewestProducts from "./components/newestProducts";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <section className="w-max-7xl px-4 md:px-8 mx-auto mb-10">
         <div className="mx-auto text-center text-4xl sm:text-5xl font-extrabold">
           <h1>Find a product you are looking for</h1>
@@ -25,6 +25,6 @@ export default function Home() {
       <footer className="bg-primary h-[150px] text-center text-primary-foreground flex justify-center items-center">
         <p className="text-sm">Footer links and more...</p>
       </footer>
-    </>
+    </div>
   );
 }

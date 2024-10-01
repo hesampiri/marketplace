@@ -6,9 +6,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { Suspense } from "react";
 
 type cardProp = {
   id: string;
@@ -25,15 +26,17 @@ const ProductCard = ({ name, price, images, description, id }: cardProp) => {
         <CarouselContent>
           {images.map((img, index) => (
             <CarouselItem key={index}>
-              <div className="relative h-[200px] aspect-auto">
-                <Image
-                  src={img}
-                  fill
-                  alt={`${name}`}
-                  sizes="xl"
-                  className="object-cover bg-gray-200"
-                />
-              </div>
+              <Suspense fallback={<Skeleton className="h-[200px]" />}>
+                <div className="relative h-[200px] aspect-auto">
+                  <Image
+                    src={img}
+                    fill
+                    alt={`${name}`}
+                    sizes="xl"
+                    className="object-cover bg-gray-200"
+                  />
+                </div>
+              </Suspense>
             </CarouselItem>
           ))}
         </CarouselContent>
