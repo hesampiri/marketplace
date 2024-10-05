@@ -54,7 +54,7 @@ export const RegisterFrom = () => {
   }
 
   return (
-    <div className="border shadow-lg min-w-80 p-5 rounded bg-white">
+    <div className="border shadow-lg w-80 p-5 rounded bg-white">
       <div className="w-full text-center mb-10 font-semibold">
         <h1 className="text-xl text-primary ">Registeration</h1>
       </div>
