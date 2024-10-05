@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import BuyButton from "@/app/components/buyButton";
 import {
   Carousel,
   CarouselContent,
@@ -70,7 +70,7 @@ const Productpage = async ({ params }: { params: { id: string } }) => {
             </span>
           </p>
         </div>
-        <Button className="  w-full sm:w-1/2">Buy for ${data?.price}</Button>
+        <BuyButton price={data?.price} name={data?.name} />
       </div>
     </section>
   );
