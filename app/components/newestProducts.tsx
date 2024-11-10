@@ -3,7 +3,7 @@ import React from "react";
 import ProductCard from "./productCard";
 
 async function getData() {
-  const data = prisma.product.findMany({
+  const data = await prisma.product.findMany({
     select: {
       name: true,
       images: true,
