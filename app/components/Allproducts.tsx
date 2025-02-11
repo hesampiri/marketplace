@@ -3,6 +3,7 @@ import React from "react";
 import ProductCard from "./productCard";
 
 async function getdata() {
+  
   const data = prisma.product.findMany({
     select: {
       id: true,
